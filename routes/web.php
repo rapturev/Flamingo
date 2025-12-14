@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FeedController::class, 'index'])->name('feed.index');
@@ -29,3 +30,5 @@ Route::prefix('posts')->group(function() {
 
 Route::get('/setlike', [LikeController::class, 'setLike'])->name('likes.setlike');
 Route::get('/unsetlike', [LikeController::class, 'unsetLike'])->name('likes.unsetlike');
+
+Route::get('/tags', [TagController::class, 'index'])->name('tags.index');
