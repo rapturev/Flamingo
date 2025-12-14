@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FeedController;
+use App\Http\Controllers\LikeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FeedController::class, 'index'])->name('feed.index');
@@ -25,3 +26,6 @@ Route::prefix('posts')->group(function() {
     Route::put('/{post}', [PostController::class, 'update'])->name('posts.update');
     Route::delete('/{post}', [PostController::class, 'destroy'])->('posts.destroy');
 })
+
+Route::get('/setlike', [LikeController::class, 'setLike'])->name('likes.setlike');
+Route::get('/unsetlike', [LikeController::class, 'unsetLike'])->name('likes.unsetlike');
