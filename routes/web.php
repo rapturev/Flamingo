@@ -16,7 +16,7 @@ Route::prefix('blogs')->group(function() {
     Route::get('/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
     Route::put('/{blog}', [BlogController::class, 'update'])->name('blogs.update');
     Route::delete('/{blog}', [BlogController::class, 'destroy'])->('blogs.destroy');
-})
+});
 
 Route::prefix('posts')->group(function() {
     Route::get('/', [PostController::class, 'index'])->name('posts.index');
@@ -26,7 +26,7 @@ Route::prefix('posts')->group(function() {
     Route::get('/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
     Route::put('/{post}', [PostController::class, 'update'])->name('posts.update');
     Route::delete('/{post}', [PostController::class, 'destroy'])->('posts.destroy');
-})
+});
 
 Route::get('/setlike', [LikeController::class, 'setLike'])->name('likes.setlike');
 Route::get('/unsetlike', [LikeController::class, 'unsetLike'])->name('likes.unsetlike');
