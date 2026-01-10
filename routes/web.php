@@ -25,7 +25,7 @@ Route::prefix('posts')->group(function() {
     Route::get('/{post}', [PostController::class, 'show'])->name('posts.show');
     Route::get('/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
     Route::put('/{post}', [PostController::class, 'update'])->name('posts.update');
-    Route::delete('/{post}', [PostController::class, 'destroy'])->('posts.destroy');
+    Route::delete('/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 });
 
 Route::get('/setlike', [LikeController::class, 'setLike'])->name('likes.setlike');
