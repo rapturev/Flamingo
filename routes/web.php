@@ -15,7 +15,7 @@ Route::prefix('blogs')->group(function() {
     Route::get('/{blog}', [BlogController::class, 'show'])->name('blogs.show');
     Route::get('/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
     Route::put('/{blog}', [BlogController::class, 'update'])->name('blogs.update');
-    Route::delete('/{blog}', [BlogController::class, 'destroy'])->('blogs.destroy');
+    Route::delete('/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
 });
 
 Route::prefix('posts')->group(function() {
