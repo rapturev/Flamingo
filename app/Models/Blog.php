@@ -9,4 +9,11 @@ class Blog extends Model
 {
     /** @use HasFactory<\Database\Factories\BlogFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'category_id',
+        'name',
+    ];
+
 }
