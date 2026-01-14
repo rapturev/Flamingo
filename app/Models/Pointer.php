@@ -9,5 +9,5 @@ class Pointer extends Model
     protected $fillable = [
         'post_id',
         'blog_id',
-    ]
+    ];
 }
