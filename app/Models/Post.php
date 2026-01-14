@@ -9,4 +9,11 @@ class Post extends Model
 {
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'blog_id',
+        'walk_id',
+        'content',
+    ];
 }
+
