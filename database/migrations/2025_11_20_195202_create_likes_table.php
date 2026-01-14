@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('likes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('post_id')->nullable()->constrained();
+            $table->foreignId('comment_id')->nullable()->constrained();
+            $table->foreignId('user_id')->constrained();
         });
     }
 
