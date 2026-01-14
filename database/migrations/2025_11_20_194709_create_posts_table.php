@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('blog_id')->constrained();
+            $table->foreignId('blog_id')->nullable()->constrained();
+            $table->foreignId('walk_id')->nullable()->constrained();
             $table->text('content');
         });
     }
