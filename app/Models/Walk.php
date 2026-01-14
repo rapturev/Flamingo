@@ -9,4 +9,9 @@ class Walk extends Model
 {
     /** @use HasFactory<\Database\Factories\WalkFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'name',
+    ];
 }
