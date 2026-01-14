@@ -9,4 +9,9 @@ class Bookmark extends Model
 {
     /** @use HasFactory<\Database\Factories\BookmarkFactory> */
     use HasFactory;
+
+    protected $fillable = [
+         'user_id',
+         'post_id',
+    ]
 }
