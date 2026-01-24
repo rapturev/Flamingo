@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FeedController::class, 'index'])->name('feed.index');
 
-Route::resource('users', UserController::class);
+Route::resource('users', UserController::class)->except('index');
 Route::resource('blogs', BlogController::class);
 Route::resource('posts', PostController::class);
 Route::resource('comments', CommentController::class);
@@ -33,6 +33,3 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('categorie
 Route::get('/bookmarks', [BookmarkController::class, 'index'])->name('bookmarks.index');
 Route::get('/mark', [BookmarkController::class, 'mark'])->name('bookmarks.mark');
 Route::get('/unmark', [BookmarkController::class, 'unmark'])->name('bookmarks.unmark');
-
-
-
