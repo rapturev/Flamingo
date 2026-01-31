@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\Post;
+use App\Models\Pointer;
 
 class Blog extends Model
 {
@@ -28,5 +29,10 @@ class Blog extends Model
     public function posts(): HasMany
     {
         return $this->hasMany(Post::class);
+    }
+
+    public function pointers(): HasMany
+    {
+        return $this->hasMany(Pointer::class);
     }
 }

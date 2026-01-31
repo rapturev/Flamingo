@@ -17,4 +17,9 @@ class Pointer extends Model
     {
         return $this->belongsTo(Post::class);
     }
+
+    public function blog(): BelongsTo
+    {
+        return $this->belongsTo(Blog::class);
+    }
 }
