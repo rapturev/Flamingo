@@ -13,7 +13,7 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\WalkController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [FeedController::class, 'index'])->name('feed.index');
+Route::get('/', [FeedController::class])->name('feed.index');
 
 Route::resource('users', UserController::class)->except('index');
 Route::resource('blogs', BlogController::class);
